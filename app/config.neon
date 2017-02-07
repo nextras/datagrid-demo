@@ -1,0 +1,13 @@
+application:
+	mapping:
+		*: NextrasDemos\Datagrid\*Module\*Presenter
+
+database:
+	dsn: 'sqlite:%appDir%/users.s3db'
+
+latte:
+	macros:
+		- Nextras\Latte\Macros\RedefineMacro
+
+services:
+	routing.router: Nette\Application\Routers\SimpleRouter('Full:default')

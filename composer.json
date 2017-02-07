@@ -1,0 +1,14 @@
+{
+	"require": {
+		"nette/application": "~2.4",
+		"nette/bootstrap": "~2.4",
+		"nette/database": "~2.4",
+		"nette/di": "~2.4",
+		"nette/forms": "~2.4",
+		"nette/robot-loader": "~2.4",
+		"latte/latte": "~2.4",
+		"tracy/tracy": "~2.4",
+		"nextras/latte-macros": "@dev",
+		"nextras/datagrid": "@dev"
+	}
+}

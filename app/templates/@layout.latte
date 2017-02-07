@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="{$basePath}/proxy.php?f=bootstrap-style/bootstrap3.nextras.datagrid.css" type="text/css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" ></script>
+	<script type="text/javascript" src="nette.ajax.js" ></script>
+	<script type="text/javascript" >
+	$(function () {
+		$.nette.init();
+	});
+	</script>
+	<script src="{$basePath}/proxy.php?f=js/nextras.datagrid.js"></script>
+</head>
+<body>
+<div class="container">
+	<ul class="nav nav-pills">
+		<li><a href="{plink :DataDump:}">Data dump</a></li>
+		<li><a href="{plink :Paginator:}">Paginator</a></li>
+		<li><a href="{plink :Full:}">Full</a></li>
+	</ul>
+	<div class="row">
+		<div class="col-sm-12">
+			{include content}
+		</div>
+	</div>
+</div>
+</body>
+</html>

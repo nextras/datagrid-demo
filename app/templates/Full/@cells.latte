@@ -1,3 +1,9 @@
+{define row}
+	<tr id={$rowId} n:class="$row->gender === male ? sex-male : sex-female">
+		{include row-inner row => $row}
+	</tr>
+{/define}
+
 {define col-filter-firstname}
 	<div class="input-group">
 		<span class="input-group-addon input-sm">@</span>

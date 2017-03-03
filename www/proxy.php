@@ -1,15 +1,16 @@
 <?php
 
-// do not use this on production!!!
+$allowed = [
+	'bootstrap-style/bootstrap3.nextras.datagrid.css' => true,
+	'js/nextras.datagrid.js' => true,
+];
 
-$root = realpath(__DIR__ . '/../vendor/nextras/datagrid');
-$file = $root . '/' . (isset($_GET['f']) ? $_GET['f'] : '');
-
-if (preg_match('#\.\.#', $file) || !file_exists($file)) {
+if (!isset($allowed[$_GET['f']])) {
 	header("HTTP/1.0 404 Not Found");
 	exit;
 }
 
+$file = __DIR__ . '/../vendor/nextras/datagrid/' . $_GET['f'];
 if (strpos($file, '.css') !== FALSE) {
 	header('Content-type: text/css', TRUE);
 } elseif (strpos($file, '.js') !== FALSE) {
